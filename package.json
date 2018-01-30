@@ -1,0 +1,14 @@
+{
+  "name": "quikeatz-app",
+  "version": "1.0.0",
+  "description": "Recipes app",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
