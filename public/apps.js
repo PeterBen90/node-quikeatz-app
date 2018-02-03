@@ -30,10 +30,10 @@ var MOCK_NEW_RECIPES = {
         },
         {
             "id": "4444444",
-            "text": "Chocolate Cheesecake",
+            "title": "Chocolate Cheesecake",
             "type": "Dessert",
             "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean id scelerisque leo, vel pharetra leo. Duis vitae metus auctor, bibendum dolor ut, faucibus risus. Integer varius dictum risus ut placerat. Sed orci nulla, placerat tincidunt tellus id, elementum iaculis magna. Morbi ac lectus convallis, sodales ligula ac, bibendum leo. Integer et blandit lacus, nec luctus massa.",
-            "Calories": 320,
+            "calories": 320,
             "publishedAt": 1470016976609
 
         }
