@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 // this is my schema to represent a new recipe post
 const newRecipeSchema = mongoose.Schema({
   title: {type: String, required: true},
-  recipeType: {type: String, required: true},
+  type: {type: String, required: true},
   content: {type: String, required: true},
   calories: {type: Number},
   author: {
@@ -22,7 +22,7 @@ newRecipeSchema.methods.serialize = function() {
   return {
     id: this._id,
     title: this.title,
-    recipeType: this.recipeType,
+    type: this.type,
     content: this.content,
     calories: this.calories,
     author: this.authorString
