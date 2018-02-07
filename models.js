@@ -7,7 +7,7 @@ const newRecipeSchema = mongoose.Schema({
   title: {type: String, required: true},
   type: {type: String, required: true},
   content: {type: String, required: true},
-  calories: {type: Number},
+  calories: {type: Number, required: true},
   author: {
     firstName: String,
     lastName: String,

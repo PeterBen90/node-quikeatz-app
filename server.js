@@ -20,6 +20,9 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use('/recipe', recipesRouter);
 
+app.use('*', function (req, res) {
+  res.status(404).json({ message: 'Not Found' });
+});
 
 let server;
 
