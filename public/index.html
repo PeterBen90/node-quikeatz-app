@@ -1,16 +1,63 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Quik | Eatz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recipe ">
+  <title>Quik Eatz | Recipe sharing platform</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="float-grid.css">
+  <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+
+    <section role= "region" class="js-start-display">
+      <header role="banner">
+        <div class="svg-wrapper">
+          <svg height="60" width="320" xmlns="http://www.w3.org/2000/svg">
+          <rect class="shape" height="60" width="320" />
+          </svg>
+        <div class="text">QUIK EATZ</div>
+        </div>
+      </header>
+    </section>
+
+    <nav role="navigation" class="nav">
+      <ul>
+        <a href="#"><li class="nav-left"><span class="nav-logo">QUIK EATZ</span></li></a>
+        <a href="#about"><li class="nav-left nav-hover">About</li></a>
+        <a href="#how to"><li class="nav-left nav-hover">How to</li></a>
+        <a href="#register"><li class="nav-left nav-hover">Register</li></a>
+        <a href="#contact"><li class="nav-left nav-hover">Contact</li></a>
+        <a href="#log-in"><li class="nav-right nav-hover log-in" id="demo-button">Sign In / Demo Account</li></a>
+      </ul>
+    </nav>
+
   <main>
-    <header>
-      <h1>Quik | Eatz</h1>
-      <p>Hello World</p>
-    </header>
+
+    <section role="reigion">
+      <div id="about">
+        <div class="row">
+          <div class="col-12">
+            <div class="about-text">
+              <h2>Recipe Sharing Platform</h2>
+              <p>Quik Eatz is a recipe sharing platform that allows each user to create and post food and/or cocktail recipes. Quik eats allows users to rate and save recipes posted by other users for your own personal online cookbook. Register and you'll have access to new and fun recipes to try any time you choose!</p>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
 
   </main>
 
+  <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+html, body {
+  background: #333;
+  height: 100%;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+/*Animated start display*/
+
+.svg-wrapper {
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+  top: 300px;
+  transform: translateY(-50%);
+  width: 320px;
+}
+
+.shape {
+  fill: transparent;
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -474;
+  stroke-width: 8px;
+  stroke: #19f6e8;
+}
+
+.text {
+  color: #fff;
+  font-size: 45px;
+  letter-spacing: 8px;
+  line-height: 32px;
+  position: relative;
+  top: -48px;
+}
+
+@keyframes draw {
+  0% {
+    stroke-dasharray: 140 540;
+    stroke-dashoffset: -474;
+    stroke-width: 8px;
+  }
+  100% {
+    stroke-dasharray: 760;
+    stroke-dashoffset: 0;
+    stroke-width: 2px;
+  }
+}
+
+.svg-wrapper:hover .shape {
+  -webkit-animation: 0.5s draw linear forwards;
+  animation: 0.5s draw linear forwards;
+}
+
+/*Navigation*/
+
+nav {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 10;
+}
+
+.nav-logo {
+  color: #19f6e8;
+}
+
+nav a {
+  text-decoration: none;
+  color:inherit;
+}
+
+nav ul {
+  overflow: hidden;
+  text-align: center;
+  margin: 0;
+  padding:0;
+  color:white;
+  letter-spacing: 2px;
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+  transition: all 0.4s ease;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 18px 15px;
+  font-size: 17px;
+  transition: 0.3s ease;
+}
+
+nav ul .nav-hover:hover {
+  color: #19f6e8;
+}
+
+.nav-ul-scroll {
+  background-color: rgba(255,255,255,.95);
+  color:#303030;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.nav-logo-scroll {
+  font-weight: bold;
+  background: #19f6e8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-left {
+  position: relative;
+  right: 90px;
+}
+
+.nav-right {
+  position: relative;
+  left: 90px;
+}
+
+/*About section*/
+
+#about {
+  padding-top: 35px;
+  padding-bottom: 60px;
+  width: 100%;
+  background: #f2f2f2;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  color: #333333;
+  top: 600px;
+}
+
+.about-text {
+  display: inline-block;
+  width: 45%;
+  position: relative;
+  left: 600px;
+}
+
+.about-text h2 {
+  line-height: 45px;
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+.about-text p {
+  font-size: 20px;
+  line-height:35px;
+}
