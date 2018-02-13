@@ -16,10 +16,16 @@ function getRecipeEntries(callbackFn) {
 }
 
 function displayRecipeEntries(data) {
-  for (index in data) {
+  console.log(data.recipes);
+  for (index in data.recipes) {
        $('body').append(
-        '<p>' + data[index].title + '</p>');
-    }
+        '<h3 class="recipe-title">' + data.recipes[index].title + '</h3>' +
+        '<p class="recipe-type">' + data.recipes[index].type + '</p>' +
+        '<p class="recipe-content">' + data.recipes[index].content + '</p>' +
+        '<p class="recipe-calories">' + data.recipes[index].calories + '</p>' +
+        '<p class="recipe-author">' + data.recipes[index].author + '</p>'
+        );
+  }
 }
 
 
@@ -30,3 +36,5 @@ function getAndDisplayRecipeEntries() {
 $(function() {
     getAndDisplayRecipeEntries();
 })
+
+//DELETE Recipes

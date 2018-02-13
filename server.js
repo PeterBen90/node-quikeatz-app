@@ -22,13 +22,19 @@ app.use(bodyParser.json());
 
 app.use('/recipe', recipesRouter);
 
+
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/', (req, res) => {
+app.get('/recipes', (req, res) => {
     res.sendFile(__dirname + '/public/recipes.html');
 });
+
+app.get('/recipes/new', (req, res) => {
+  res.sendFile(__dirname + '/public/new-recipe.html');
+});
+
 
 app.use('*', function (req, res) {
   res.status(404).json({ message: 'Not Found' });

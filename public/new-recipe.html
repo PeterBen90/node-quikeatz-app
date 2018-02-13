@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="New-Recipe">
+  <title>Create New Recipe</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/float-grid.css">
+  <link rel="stylesheet" type="text/css" href="/new-recipe.css">
+</head>
+<body>
+
+  <section role="region">
+    <header role="banner" class="title row">
+       <h1 class="header">Create New Recipe</h1>
+    </header>
+
+    <nav role="navigation" class="nav">
+        <ul>
+          <li class="nav-left"><span class="nav-logo">QUIK EATZ</span></li>
+          <a href="/recipes"><li class="nav-left nav-hover">Dashboard</li></a>
+          <a href="/recipes/new"><li class="nav-left nav-hover">New Recipe</li></a>
+          <a href="/search"><li class="nav-left nav-hover">Search Recipes</li></a>
+          <a href="/logout"><li class="nav-right nav-hover log-out" id="demo-button">Log out</li></a>
+        </ul>
+    </nav>
+  </section>
+
+  <main>
+
+    <section role="region">
+      <div class="row">
+        <div class="col-12">
+          <form class="new-recipe-form" action="/recipes/new" method="post">
+            <fieldset name="new-recipe-input">
+                <input placeholder="Recipe Title" type="text" name="recipe-title" id="recipe-title" autocomplete="off" required />
+                <textarea rows="18" class="recipe-entry" placeholder="Create recipe here..."></textarea>
+            </fieldset>
+
+            <div class="recipe-type">
+              <h2 class="type-title">Please Select the type of recipe</h2>
+
+              <input type="radio" name="type-of-recipe" id="appetizer" value="0" checked>
+              <label for="appetizer-recipe" class="recipe-type-select">Appetizer</label><br/>
+
+              <input type="radio" name="type-of-recipe" id="entree" value="1">
+              <label for="entree-recipe" class="recipe-type-select">Entree</label><br/>
+
+              <input type="radio" name="type-of-recipe" id="dessert" value="2">
+              <label for="dessert-recipe" class="recipe-type-select">Dessert</label><br/>
+
+              <input type="radio" name="type-of-recipe" id="snack" value="3">
+              <label for="snack-recipe" class="recipe-type-select">Snack</label><br/>
+
+              <input type="radio" name="type-of-recipe" id="cocktail" value="4">
+              <label for="cocktail-recipe" class="recipe-type-select">Cocktail</label><br/>
+            </div>
+
+            <div class="calories-container">
+              <h2>Number of calories: </h2>
+              <input type="number" name="calorie-counter" class="calories-input" title="Please enter a number" placeholder="100" autocomplete="off" required />
+            </div>
+
+            <div class="author">
+              <h2>Author </h2>
+              First name: <input  type="text" name="firstname-input" id="firstname" autocomplete="off" /><br/>
+              Last name: <input  type="text" name="firstname-input" id="lastname" autocomplete="off" />
+            </div>
+
+            <div class="submit">
+              <button type="submit" class="publish">Publish</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+  <script src="new-recipe.js"></script>
+</body>
+</html>
