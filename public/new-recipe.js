@@ -1,30 +1,34 @@
-function postRecipeRequest(title, content, type, calories, firstName, lastName) {
-  $('.new-recipe-form').submit(function(event) {
+// POST recipes
+
+$('.new-recipe-form').submit(function(event) {
     event.preventDefault();
     addNewRecipe();
-  });
+});
+
+function postRecipeRequest(title, content, type, calories, firstName, lastName) {
 
     $.ajax({
-      method: 'POST',
-      url: '/recipe',
-      data: JSON.stringify({
-        title: title,
-        content: content,
-        type: type,
-        calories: calories,
-        author: {
-          firstName: firstName,
-          lastName: lastName
+        method: 'POST',
+        url: '/recipe',
+        data: JSON.stringify({
+          title: title,
+          content: content,
+          type: type,
+          calories: calories,
+          author: {
+            firstName: firstName,
+            lastName: lastName
+          },
+        }),
+        contentType: 'application/json',
+        dataType: 'json',
+        success: result => {
+          //console.log(result);
+            window.location = "/recipes";
         },
-      }),
-      contentType: 'application/json',
-      dataType: 'json',
-      success: data => {
-        console.log(data);
-      },
-      error: error => {
-        console.log(error);
-      }
+        error: error => {
+          console.log(error);
+        }
     });
 }
 
@@ -57,4 +61,3 @@ function addNewRecipe() {
   postRecipeRequest(recipeTitle, recipeContent, recipeVal, calorieCount, authorFirstName, authorLastName);
 
 }
-
