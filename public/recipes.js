@@ -35,7 +35,7 @@ function displayRecipeEntries(data) {
                 <p class="recipe-content">${data.recipes[index].content}</p>
                 <p class="recipe-calories">Calories: ${data.recipes[index].calories}</p>
                 <p class="recipe-author">Author: ${data.recipes[index].author}</p>
-                <button class="delete-btn">Delete</button><button class="edit-btn">Edit</button>
+                <button id="${data.recipes[index].id}" class="delete-btn">Delete</button><button class="edit-btn">Edit</button>
             </div>
           </div>
         `);
@@ -45,10 +45,10 @@ function displayRecipeEntries(data) {
 function deleteRecipeEntries(data) {
   for (index in data.recipes) {
     $('.delete-btn').on('click', function(event) {
-      let recipeId = $(this).parent('id');
+      let recipeId = $(this).attr('id');
 
       $.ajax({
-        url: `/recipe/${data.recipes[index].id}`,
+        url: `/recipe/${recipeId}`,
         type: 'DELETE',
         dataType: 'json',
         contentType: 'application/json',
