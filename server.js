@@ -36,7 +36,7 @@ app.get('/recipes/new', (req, res) => {
 });
 
 app.get('/recipes/edit', (req, res) => {
-  res.sendFile(__dirname + '/public/new-recipe.html');
+  res.sendFile(__dirname + '/public/edit-recipe.html');
 });
 
 

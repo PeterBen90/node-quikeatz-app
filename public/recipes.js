@@ -6,6 +6,14 @@ $(document).on('click', 'button', function () {
     $(this).toggleClass("max").next().slideToggle(200);
 });
 
+// Store JSON object from hidden div as a string
+// transfers stroed raw data to edit-recipe
+
+$(document).on('click', '.edit-btn', function(event) {
+  window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
+  window.location = '/recipes/edit';
+});
+
 // GET and DELETE Recipes
 
 function getRecipeEntries(callbackFn) {
@@ -61,11 +69,6 @@ function deleteRecipeEntries(data) {
     });
   }
 }
-
-$(document).on('click', '.edit-btn', function(event) {
-  window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
-  window.location = '/recipes/edit';
-});
 
 
 function getAndDisplayRecipeEntries() {

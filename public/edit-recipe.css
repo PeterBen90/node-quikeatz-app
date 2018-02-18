@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Navigation*/
+
+html body {
+  background: #f2f2f2;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow: hidden;
+}
+
+nav {
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  text-align: center;
+  z-index: 5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.nav-logo {
+  color: #19f6e8;
+}
+
+nav a {
+  text-decoration: none;
+  color:inherit;
+}
+
+nav ul {
+  overflow: hidden;
+  text-align: center;
+  background: #333333;
+  margin: 0;
+  padding:0;
+  color: white;
+  letter-spacing: 2px;
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+  transition: all 0.4s ease;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 22px;
+  font-size: 20px;
+  transition: 0.3s ease;
+}
+
+nav ul .nav-hover:hover {
+  color: #19f6e8;
+}
+
+/*Page Content*/
+
+.title {
+  width: 100%;
+  background: #f2f2f2;
+  margin-top: 40px;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+  color: #333333;
+  top: 10px;
+  background: none;
+  right: 140px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 24px;
+}
+
+fieldset {
+  width: 80%;
+  display: inline-block;
+  border: none;
+  margin-top: 25px;
+  margin-left: -155px;
+}
+
+#recipe-title {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 5px 8px;
+  font-size: 20px;
+  border: solid 1px #c4c4c4;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: solid 1px #c4c4c4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.recipe-type,
+.calories-container,
+.author,
+.submit {
+  position: relative;
+  left: 70%;
+  bottom: 430px;
+  color: #333333;
+  letter-spacing: 1px;
+}
+
+.recipe-type-select,
+.calories-container {
+  font-size: 20px;
+}
+
+.recipe-type input {
+  margin-bottom: 5px;
+}
+
+.calories-input {
+  width: 10%;
+  border-radius: 5px;
+  border: solid 1px #c4c4c4;
+  position: relative;
+  left: 210px;
+  bottom: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.author {
+  margin-top: -40px;
+  font-size: 18px;
+}
+
+.author input {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: solid 1px #c4c4c4;
+  font-size: 20px;
+  margin-top: -15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#lastname {
+  margin-left: 3px;
+}
+
+form h2 {
+  font-size: 24px;
+}
+
+.submit {
+  margin-top: 15px;
+  font-size: 20px;
+  margin-left: 140px;
+}
+
+button {
+  padding: 3px;
+  width: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button:hover {
+  color: #19f6e8;
+}
+
+/*Responsive Nav*/
+
+
