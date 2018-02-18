@@ -35,6 +35,10 @@ app.get('/recipes/new', (req, res) => {
   res.sendFile(__dirname + '/public/new-recipe.html');
 });
 
+app.get('/recipes/edit', (req, res) => {
+  res.sendFile(__dirname + '/public/new-recipe.html');
+});
+
 
 app.use('*', function (req, res) {
   res.status(404).json({ message: 'Not Found' });

@@ -61,3 +61,23 @@ function addNewRecipe() {
   postRecipeRequest(recipeTitle, recipeContent, recipeVal, calorieCount, authorFirstName, authorLastName);
 
 }
+
+// fill form with Recipe
+
+if (window.localStorage.getItem('recipe')) {
+    const recipe = JSON.parse(window.localStorage.getItem('recipe'));
+    console.log(recipe);
+    $('#recipe-title').val(recipe.title);
+    $('.recipe-entry').val(recipe.content);
+    $('.calories-input').val(recipe.calories);
+    $('#firstname').val(recipe.author.split(' ')[0]);
+    $('#lastname').val(recipe.author.split(' ')[1]);
+
+}
+
+
+
+
+
+
+

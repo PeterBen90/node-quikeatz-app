@@ -36,6 +36,7 @@ function displayRecipeEntries(data) {
                 <p class="recipe-calories">Calories: ${data.recipes[index].calories}</p>
                 <p class="recipe-author">Author: ${data.recipes[index].author}</p>
                 <button id="${data.recipes[index].id}" class="delete-btn">Delete</button><button class="edit-btn">Edit</button>
+                <div id="raw-data" hidden>${JSON.stringify(data.recipes[index])}</div>
             </div>
           </div>
         `);
@@ -60,6 +61,11 @@ function deleteRecipeEntries(data) {
     });
   }
 }
+
+$(document).on('click', '.edit-btn', function(event) {
+  window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
+  window.location = '/recipes/edit';
+});
 
 
 function getAndDisplayRecipeEntries() {
