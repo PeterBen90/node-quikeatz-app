@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+}
+
+html body {
+  background: #333333;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow: hidden;
+}
+
+header {
+  text-align: center;
+  font-size: 24px;
+  color: #f2f2f2;
+  position: relative;
+}
+
+header:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  right: 45%;
+  height: 5px;
+  background: #19f6e8;
+  display: block;
+}
+
+#login {
+  background: #f2f2f2;
+  margin-right: 33%;
+  margin-left: 33%;
+  text-align: center;
+  margin-top: 30px;
+  color: #333333;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid black;
+}
+
+
+.login-text h2 {
+  font-size: 40px;
+}
+
+.login-text p {
+line-height: 0.5;
+}
+
+.demo {
+  text-align: left;
+  margin-left: 35%;
+}
+
+.login-form input {
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #c4c4c4;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+button {
+  margin-top: 30px;
+  padding: 3px;
+  width: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+  background-color: #333333;
+  color: #f2f2f2;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+  transition: all 0.4s ease;
+}
+
+button:hover {
+  color: #19f6e8;
+}
+
+fieldset {
+  border: none;
+  font-size: 20px;
+}
+
+fieldset p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+
+

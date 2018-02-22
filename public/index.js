@@ -62,10 +62,16 @@ $('.login-form').on('submit', event => {
         success: response => {
             localStorage.setItem('token', response.authToken)
             window.location = "recipes.html";
-        },
-        error: error => console.log(error),
+        }
     });
 });
 
+$('#demo-button').on('click', event => {
+    window.location = "login.html";
+});
+
+$('.register-button').on('click', event => {
+    window.location = "index.html#register"
+});
 
 

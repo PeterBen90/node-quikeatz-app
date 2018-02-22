@@ -63,12 +63,12 @@ nav ul .nav-hover:hover {
 
 .title,
 .js-title {
-  width: 100%;
+  /*width: 100%;*/
   background: #f2f2f2;
   margin-top: 40px;
   text-align: left;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   color: #333333;
   top: 10px;
   background: none;
@@ -79,7 +79,7 @@ nav ul .nav-hover:hover {
 }
 
 .js-title {
-  margin-top: -10px;
+  /*margin-top: -10px;*/
 }
 
 /*Accordian Animation*/
@@ -117,6 +117,12 @@ nav ul .nav-hover:hover {
   margin-bottom: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+  transition: all 0.4s ease;
 }
 .btn:after {
   content: '\002B';
@@ -156,6 +162,12 @@ nav ul .nav-hover:hover {
   color: #f2f2f2;
   margin-right: 50px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-transition: max-height 0.4s;
+  -ms-transition: max-height 0.4s;
+  -moz-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
+  transition: all 0.4s ease;
 }
 
 .delete-btn:hover,
