@@ -5,7 +5,8 @@
 html body {
   background: #333333;
   font-family: 'Roboto Condensed', sans-serif;
-  overflow: hidden;
+/*  margin-bottom: 30px;*/
+/*  overflow: hidden;*/
 }
 
 header {
@@ -28,11 +29,9 @@ header:after {
 
 #login {
   background: #f2f2f2;
-/*  margin-right: 33%;
-  margin-left: 33%;*/
+  margin-right: 5%;
+  margin-left: 5%;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
   margin-top: 30px;
   color: #333333;
   border-radius: 10px;
@@ -46,12 +45,11 @@ header:after {
 }
 
 .login-text p {
- line-height: 0.5;
+ line-height: 1;
 }
 
 .demo {
-  text-align: left;
-  margin-left: 43%;
+  text-align: center;
 }
 
 .login-form input {
