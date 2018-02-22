@@ -28,9 +28,11 @@ header:after {
 
 #login {
   background: #f2f2f2;
-  margin-right: 33%;
-  margin-left: 33%;
+/*  margin-right: 33%;
+  margin-left: 33%;*/
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 30px;
   color: #333333;
   border-radius: 10px;
@@ -44,12 +46,12 @@ header:after {
 }
 
 .login-text p {
-line-height: 0.5;
+ line-height: 0.5;
 }
 
 .demo {
   text-align: left;
-  margin-left: 35%;
+  margin-left: 43%;
 }
 
 .login-form input {
