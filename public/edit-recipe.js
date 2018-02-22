@@ -1,3 +1,22 @@
+// Bullet points for textarea
+$(".recipe-entry").focus(function() {
+    if(document.getElementById('todolist').value === ''){
+        document.getElementById('todolist').value +='• ';
+  }
+});
+
+$(".recipe-entry").keyup(function(event){
+  var keycode = (event.keyCode ? event.keyCode : event.which);
+    if(keycode == '13'){
+        document.getElementById('todolist').value +='• ';
+  }
+  var txtval = document.getElementById('todolist').value;
+  if(txtval.substr(txtval.length - 1) == '\n'){
+    document.getElementById('todolist').value = txtval.substring(0,txtval.length - 1);
+  }
+});
+
+
 // fill form with Recipe information
 
 function fillForm() {
@@ -35,11 +54,13 @@ function fillForm() {
   }
 }
 
+// Update recipes
+
 function updateRecipeRequest(id, title, content, type, calories, firstName, lastName) {
     if (window.localStorage.getItem('recipe')) {
       const recipe = JSON.parse(window.localStorage.getItem('recipe'));
       let recipeId = recipe.id;
-      console.log(recipeId);
+      //console.log(recipeId);
 
       $.ajax({
           method: 'PUT',
@@ -103,6 +124,13 @@ $('.new-recipe-form').submit(function(event) {
     event.preventDefault();
     addNewRecipe();
 });
+
+// logout
+
+$('.log-out').on('click', () => {
+  localStorage.removeItem('token');
+  window.location = "/"
+})
 
 
 

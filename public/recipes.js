@@ -3,7 +3,7 @@ $(document).on('click', 'button', function () {
   $('html, body').animate({
       scrollTop: $('.container').offset().top
     }, 500);
-    $(this).toggleClass("max").next().slideToggle(200);
+    $(this).toggleClass("max").next().slideToggle(500);
 });
 
 // Store JSON object from hidden div as a string
@@ -78,6 +78,23 @@ function getAndDisplayRecipeEntries() {
 function getAndDeleteRecipeEntries() {
   getRecipeEntries(deleteRecipeEntries);
 }
+
+const token = localStorage.getItem('token');
+
+$.ajax({
+  method: 'GET',
+  url: '/api/protected',
+  headers: {
+    Authorization: `Bearer ${token}`
+  },
+  success: response => $('.header').html(response.data),
+  error: error => window.location = "/"
+});
+
+$('.log-out').on('click', () => {
+  localStorage.removeItem('token');
+  window.location = "/"
+})
 
 
 $(getAndDisplayRecipeEntries);
