@@ -1,8 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   background: #333;
   height: 100%;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
+  /*overflow-x: hidden;*/
 }
 
 /*Animated start display*/
@@ -123,12 +128,11 @@ nav ul .nav-hover:hover {
 /*About section*/
 
 #about {
-  padding-top: 35px;
   padding-bottom: 60px;
   width: 100%;
   background: #f2f2f2;
   text-align: left;
-  position: relative;
+  position: absolute;
   z-index: 1;
   color: #333333;
   top: 600px;
@@ -136,18 +140,105 @@ nav ul .nav-hover:hover {
 
 .about-text {
   display: inline-block;
-  width: 45%;
+  width: 100%;
   position: relative;
-  left: 600px;
+  top: 100px;
 }
 
 .about-text h2 {
   line-height: 45px;
   font-size: 40px;
-  margin-bottom: 0;
 }
 
 .about-text p {
   font-size: 20px;
   line-height:35px;
+  padding-bottom: 200px;
+}
+
+.about-image {
+  display: inline-block;
+  text-align: right;
+  position: relative;
+  left: 120%;
+  top: 650px;
+  z-index: 5;
+
+}
+
+/*How to section*/
+
+#how-to {
+  padding-bottom: 60px;
+  width: 100%;
+  padding-top: 100px;
+  background: #f2f2f2;
+  text-align: left;
+  position: absolute;
+  z-index: 1;
+  color: #333333;
+  top: 1200px;
+}
+
+.how-to-text {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  top: 60px;
+  margin-bottom: 60px;
+}
+
+.how-to-text h2 {
+  line-height: 45px;
+  font-size: 40px;
+}
+
+.how-to-text p {
+  font-size: 20px;
+  line-height:35px;
+  padding-bottom: 200px;
+}
+
+.new-recipe-screenshot,
+.my-recipes-screenshot {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  left: 500px;
+  z-index: 4;
+  bottom: 700px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  border: 1px solid #616161;
+}
+
+.instructions {
+  position: relative;
+  bottom: 90px;
+}
+
+/*Register section*/
+
+#register {
+  padding-bottom: 60px;
+  width: 100%;
+  background: none;
+  text-align: center;
+  position: absolute;
+  z-index: 4;
+  color: #333333;
+  top: 2000px;
+
+}
+
+.register-text {
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  top: 90px;
+  text-align: center;
+}
+
+.register-text h2 {
+  line-height: 45px;
+  font-size: 50px;
 }
