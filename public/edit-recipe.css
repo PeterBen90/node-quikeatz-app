@@ -100,6 +100,7 @@ textarea {
   border-radius: 5px;
   border: solid 1px #c4c4c4;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: auto;
 }
 
 .recipe-type,

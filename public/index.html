@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Recipe ">
-  <title>Quik Eatz | Recipe sharing platform</title>
+  <title>Quik Eatz | Recipe storage platform</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="float-grid.css">
@@ -27,7 +27,7 @@
       <ul>
         <a href="#"><li class="nav-left"><span class="nav-logo">QUIK EATZ</span></li></a>
         <a href="#about"><li class="nav-left nav-hover">About</li></a>
-        <a href="#how to"><li class="nav-left nav-hover">How to</li></a>
+        <a href="#how-to"><li class="nav-left nav-hover">How to</li></a>
         <a href="#register"><li class="nav-left nav-hover">Register</li></a>
         <a href="#contact"><li class="nav-left nav-hover">Contact</li></a>
         <a href="#log-in"><li class="nav-right nav-hover log-in" id="demo-button">Sign In / Demo Account</li></a>
@@ -36,20 +36,69 @@
 
   <main>
 
-    <section role="reigion">
+    <section role="region">
       <div id="about">
         <div class="row">
-          <div class="col-12">
+          <div class="col-6">
             <div class="about-text">
-              <h2>Recipe Sharing Platform</h2>
-              <p>Quik Eatz is a recipe sharing platform that allows each user to create and post food and/or cocktail recipes. Quik eats allows users to rate and save recipes posted by other users for your own personal online cookbook. Register and you'll have access to new and fun recipes to try any time you choose!</p>
+              <h2>Recipe Storage Platform</h2>
+              <p>Quik Eatz is a recipe storage platform that allows each user to create and post food and/or cocktail recipes. Storing and tracking recipes can be messy when dealing with multiple cookbooks, but with Quik Eatz you can store all your favourtie recipes in one place - to help with you daily dietary and meal plans!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <div class="row">
+        <div class="col-6">
+          <div class="about-image">
+            <img class="chef-hat" src="icons/chef-hat.png" alt="image of a chef hat" width="500" height="500">
+          </div>
+        </div>
+    </div>
+
+
+
+
+    <section role="region">
+      <div id="how-to">
+        <div class="row">
+          <div class="col-6">
+            <div class="how-to-text">
+              <h2>Store and Manage Recipes</h2>
+              <p>Quik Eatz features a user-friendly interface that allows you to add recipe desciptions to your account. Once you've added your recipe, it will be stored in your dashboard for you to edit or delete whenver you choose. </p>
+              <div class="instructions">
+                <h2>Step 1: Enter Recipe</h2>
+                <h2>Step 2: Manage Recipes</h2>
+              </div>
+              <div class="screenshots">
+                <img class="new-recipe-screenshot" src="icons/new-recipe.png" alt="image of new recipe screen" width="600" height="350">
+                <img class="my-recipes-screenshot" src="icons/my-recipes.png" alt="image of new recipe screen" width="600" height="350">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section role="region">
+      <div id="register">
+        <div class="row">
+          <div class="col-12">
+            <div class="register-text">
+              <h2>Sign-up Now!</h2>
+              <form class="register-form">
+                <input type="text" name="username" class="username" />
+                <input type="password" name="password" class="password" />
+                <button name="button">Register</button>
+              </form>
 
             </div>
           </div>
         </div>
       </div>
     </section>
+
 
 
   </main>
