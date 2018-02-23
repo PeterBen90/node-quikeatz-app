@@ -151,6 +151,7 @@ nav ul .nav-hover:hover {
 .fa-bars {
   float:right;
   color: #333333;
+  font-size: 20px;
 }
 
 
@@ -354,10 +355,6 @@ fieldset p {
   nav ul li {
     width: 100%;
     padding: 15px;
-  }
-
-  nav ul li:hover {
-    /*background-color: #e0e0e0;*/
   }
 
   .handle {

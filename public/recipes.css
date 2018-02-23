@@ -201,6 +201,7 @@ nav ul .nav-hover:hover {
 .fa-bars {
   float:right;
   color: #f2f2f2;
+  font-size: 20px;
 }
 
 /*Demo Button Media Query*/
@@ -236,10 +237,6 @@ nav ul .nav-hover:hover {
   nav ul li {
     width: 100%;
     padding: 15px;
-  }
-
-  nav ul li:hover {
-    /*background-color: #e0e0e0;*/
   }
 
   .handle {
