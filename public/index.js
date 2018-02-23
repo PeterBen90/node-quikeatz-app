@@ -74,5 +74,14 @@ $('.register-button').on('click', event => {
     window.location = "index.html#register"
 });
 
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});
+
+$('nav ul a').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});
+
+
 
 
