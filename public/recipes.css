@@ -175,5 +175,90 @@ nav ul .nav-hover:hover {
   color: #19f6e8;
 }
 
+/*responsive nav*/
+
+.handle {
+  width: 100%;
+  background: #333333;
+  text-align: left;
+  padding: 12px 10px;
+  cursor: pointer;
+  display: none;
+  height:55.2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.handle-menu {
+  position: relative;
+  top:3px;
+  font-size: 20px;
+  font-weight: bold;
+  background: #19f6e8;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.fa-bars {
+  float:right;
+  color: #f2f2f2;
+}
+
+/*Demo Button Media Query*/
+
+@media screen and (min-width: 945px) {
+  #demo-button {
+    position: relative;
+    padding: 5px;
+    border-radius: 3px;
+    border:none;
+    transition-duration: 200ms;
+  }
+
+  #demo-button:hover {
+    color: #19f6e8;
+  }
+}
+
+/*Nav Media Query*/
+
+
+@media screen and (max-width: 945px) {
+  nav ul {
+    max-height: 0;
+    background-color: rgba(255,255,255,.93);
+    color:black;
+  }
+
+  .showing {
+    max-height: 22em;
+  }
+
+  nav ul li {
+    width: 100%;
+    padding: 15px;
+  }
+
+  nav ul li:hover {
+    /*background-color: #e0e0e0;*/
+  }
+
+  .handle {
+    display:block;
+  }
+
+  .nav-left {
+    position: static;
+  }
+
+  .nav-right {
+    position: static;
+  }
+
+  .nav-logo {
+    font-weight: bold;
+    background: #19f6e8;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
 
 

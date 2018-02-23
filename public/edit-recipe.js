@@ -132,6 +132,15 @@ $('.log-out').on('click', () => {
   window.location = "/"
 })
 
+$('.handle').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});
+
+$('nav ul a').on('click', function(event) {
+  $('nav ul').toggleClass('showing');
+});
+
+
 
 
 $(fillForm);
