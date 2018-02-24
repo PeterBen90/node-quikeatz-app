@@ -11,7 +11,8 @@ const newRecipeSchema = mongoose.Schema({
   author: {
     firstName: String,
     lastName: String,
-  }
+  },
+  userId: String
 });
 
 newRecipeSchema.virtual('authorString').get(function() {

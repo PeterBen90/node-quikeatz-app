@@ -2,12 +2,13 @@
   box-sizing: border-box;
 }
 
+
 html, body {
   background: #333;
   height: 100%;
   text-align: center;
   font-family: 'Roboto Condensed', sans-serif;
-  /*overflow-x: hidden;*/
+  overflow-x: hidden;
 }
 
 /*Animated start display*/
@@ -125,22 +126,22 @@ nav ul .nav-hover:hover {
   left: 90px;
 }
 
-/*responsive nav*/
+/*Responsive nav*/
 
 .handle {
   width: 100%;
-  background: #f2f2f2;
+  background: #333333;
   text-align: left;
   padding: 12px 10px;
   cursor: pointer;
   display: none;
-  height:55.2px;
+  height:65px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .handle-menu {
   position: relative;
-  top:3px;
+  top: 10px;
   font-size: 20px;
   font-weight: bold;
   background: #19f6e8;
@@ -150,17 +151,19 @@ nav ul .nav-hover:hover {
 
 .fa-bars {
   float:right;
-  color: #333333;
+  color: #f2f2f2;
   font-size: 20px;
+  margin-right: 10px;
+  position: relative;
+  bottom: 15px;
 }
 
 
 /*About section*/
 
 #about {
-  padding-bottom: 60px;
   width: 100%;
-  height:100%;
+  height: 155%;
   background: #f2f2f2;
   text-align: left;
   position: absolute;
@@ -184,30 +187,40 @@ nav ul .nav-hover:hover {
 .about-text p {
   font-size: 20px;
   line-height:35px;
-  padding-bottom: 200px;
+  padding-bottom: 30px;
 }
 
-.about-image {
+.about-images {
   display: inline-block;
-  text-align: right;
-  position: relative;
-  left: 120%;
-  top: 650px;
-  z-index: 5;
+  text-align: left;
+  padding-bottom: 100px;
+  background: none;
+}
+
+.meal {
+  display: inline;
+  float: right;
+}
+
+@media (max-width: 40em) {
+  .about-images {
+  display: none;
+  }
 }
 
 /*How to section*/
 
 #how-to {
   padding-bottom: 60px;
+  padding-top: 60px;
   width: 100%;
-  padding-top: 100px;
+  height: 125%;
   background: #f2f2f2;
   text-align: left;
   position: absolute;
-  z-index: 1;
   color: #333333;
-  top: 1200px;
+  top: 1400px;
+  z-index: 2;
 }
 
 .how-to-text {
@@ -226,24 +239,25 @@ nav ul .nav-hover:hover {
 .how-to-text p {
   font-size: 20px;
   line-height:35px;
-  padding-bottom: 200px;
+  padding-bottom: 30px;
 }
 
 .new-recipe-screenshot,
 .my-recipes-screenshot {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   position: relative;
-  left: 500px;
   z-index: 5;
-  bottom: 700px;
   border-radius: 2px;
   margin-bottom: 20px;
   border: 1px solid #616161;
+  background: #f2f2f2;
+  margin-bottom: 100px;
 }
 
-.instructions {
-  position: relative;
-  bottom: 90px;
+@media (max-width: 40em) {
+  .screenshots {
+  display: none;
+  }
 }
 
 /*Register section*/
@@ -254,7 +268,7 @@ nav ul .nav-hover:hover {
   height: 100%;
   text-align: center;
   position: absolute;
-  z-index: 1;
+  z-index: 9;
   color: #333333;
   top: 2050px;
   background: #f2f2f2;
@@ -339,7 +353,6 @@ fieldset p {
 }
 
 /*Nav Media Query*/
-
 
 @media screen and (max-width: 945px) {
   nav ul {

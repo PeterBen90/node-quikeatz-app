@@ -19,6 +19,7 @@ function postRecipeRequest(title, content, type, calories, firstName, lastName) 
             firstName: firstName,
             lastName: lastName
           },
+          userId: localStorage.getItem('userId')
         }),
         contentType: 'application/json',
         dataType: 'json',

@@ -18,7 +18,7 @@ $(document).on('click', '.edit-btn', function(event) {
 
 function getRecipeEntries(callbackFn) {
   $.ajax({
-    url: "/recipe",
+    url: `/recipe/user/${localStorage.getItem('userId')}`,
     type: 'GET',
     dataType: 'json',
 
@@ -36,9 +36,9 @@ function displayRecipeEntries(data) {
   for (index in data.recipes) {
     //console.log(data.recipes[index]);
        $('.container').append(`
-          <div id="${data.recipes[index].id}">
-            <button class="btn">${data.recipes[index].title}</button>
-            <div class="acd-content">
+          <div class="" id="${data.recipes[index].id}">
+            <button class="btn row">${data.recipes[index].title}</button>
+            <div class="acd-content col-12">
                 <p class="recipe-type">Recipe type: ${data.recipes[index].type}</p>
                 <p class="recipe-content">${data.recipes[index].content}</p>
                 <p class="recipe-calories">Calories: ${data.recipes[index].calories}</p>

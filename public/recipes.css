@@ -9,7 +9,6 @@ html body {
   font-family: 'Roboto Condensed', sans-serif;
   padding-bottom: 50px;
   overflow-x: hidden;
-
 }
 
 nav {
@@ -63,29 +62,26 @@ nav ul .nav-hover:hover {
 
 .title,
 .js-title {
-  /*width: 100%;*/
+  width: 100%;
   background: #f2f2f2;
   margin-top: 40px;
   text-align: left;
   position: relative;
   z-index: 3;
   color: #333333;
-  top: 10px;
+  /*top: 10px;*/
   background: none;
-  right: 140px;
+/*  right: 140px;*/
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 24px;
 }
 
-.js-title {
-  /*margin-top: -10px;*/
-}
 
 /*Accordian Animation*/
 
 .container {
-  width: 60%;
+  width: 65%;
   margin-left: 25px;
 }
 .acd-content {
@@ -143,7 +139,7 @@ nav ul .nav-hover:hover {
 .chef {
   position: fixed;
   top: 120px;
-  left: 850px;
+  left: 885px;
   right: 0;
   z-index:999999;
 }
@@ -151,8 +147,8 @@ nav ul .nav-hover:hover {
 .delete-btn,
 .edit-btn {
   position: relative;
-  left: 40%;
-  bottom: 58px;
+  float: right;
+  bottom: 10px;
   padding: 3px;
   width: 150px;
   padding-top: 5px;
@@ -181,16 +177,15 @@ nav ul .nav-hover:hover {
   width: 100%;
   background: #333333;
   text-align: left;
-  padding: 12px 10px;
+  padding: 0;
   cursor: pointer;
   display: none;
-  height:55.2px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  height:65px;
 }
 
 .handle-menu {
   position: relative;
-  top:3px;
+  top: 20px;
   font-size: 20px;
   font-weight: bold;
   background: #19f6e8;
@@ -202,6 +197,8 @@ nav ul .nav-hover:hover {
   float:right;
   color: #f2f2f2;
   font-size: 20px;
+  margin-right: 10px;
+  position: relative;
 }
 
 /*Demo Button Media Query*/

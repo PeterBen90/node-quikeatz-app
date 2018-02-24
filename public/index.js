@@ -1,4 +1,4 @@
-// Scroll animation and styling
+// Autoscroll and nav styling
 
 $("a").on('click', function(event) {
   if (this.hash !== "") {
@@ -12,10 +12,18 @@ $("a").on('click', function(event) {
   }
 });
 
+$('.nav-logo').click(function(event) {
+  event.preventDefault();
+    $('body,html').animate({
+      scrollTop: 0
+    }, 800
+    );
+});
+
 
 $(window).scroll(function(){
-    var a = 10;
-    var pos = $(window).scrollTop();
+    let a = 10;
+    let pos = $(window).scrollTop();
     if(pos > a) {
         $('nav ul').addClass('nav-ul-scroll');
         $('.nav-logo').addClass('nav-logo-scroll');
@@ -61,7 +69,9 @@ $('.login-form').on('submit', event => {
 
         success: response => {
             localStorage.setItem('token', response.authToken)
+            localStorage.setItem('userId', response.userId)
             window.location = "recipes.html";
+
         }
     });
 });
@@ -81,7 +91,6 @@ $('.handle').on('click', function(event) {
 $('nav ul a').on('click', function(event) {
   $('nav ul').toggleClass('showing');
 });
-
 
 
 

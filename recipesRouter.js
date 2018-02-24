@@ -9,10 +9,10 @@ const jsonParser = bodyParser.json();
 
 const {Recipe} = require('./models');
 
-//GET all recipes
-router.get('/', (req, res) => {
+//GET User
+router.get('/user/:userId', (req, res) => {
   Recipe
-    .find()
+    .find({userId: req.params.userId})
     .then(recipes => {
       res.json({
         recipes: recipes.map(
@@ -54,7 +54,8 @@ router.post('/', (req, res) => {
       type: req.body.type,
       content: req.body.content,
       calories: req.body.calories,
-      author: req.body.author
+      author: req.body.author,
+      userId: req.body.userId
     })
     .then(recipe => res.status(201).json(recipe.serialize()))
     .catch(err => {
