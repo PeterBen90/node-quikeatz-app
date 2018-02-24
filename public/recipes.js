@@ -34,9 +34,8 @@ function getRecipeEntries(callbackFn) {
 function displayRecipeEntries(data) {
 
   for (index in data.recipes) {
-    //console.log(data.recipes[index]);
        $('.container').append(`
-          <div class="" id="${data.recipes[index].id}">
+          <div class="col-8" id="${data.recipes[index].id}">
             <button class="btn row">${data.recipes[index].title}</button>
             <div class="acd-content col-12">
                 <p class="recipe-type">Recipe type: ${data.recipes[index].type}</p>

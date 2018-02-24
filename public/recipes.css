@@ -60,18 +60,16 @@ nav ul .nav-hover:hover {
 
 /*Page Content*/
 
-.title,
-.js-title {
+.title {
   width: 100%;
   background: #f2f2f2;
-  margin-top: 40px;
+  margin-top: 50px;
+  margin-left: 15px;
   text-align: left;
-  position: relative;
+  position: absolute;
   z-index: 3;
   color: #333333;
-  /*top: 10px;*/
   background: none;
-/*  right: 140px;*/
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 24px;
@@ -81,8 +79,10 @@ nav ul .nav-hover:hover {
 /*Accordian Animation*/
 
 .container {
-  width: 65%;
-  margin-left: 25px;
+  width: 100%;
+  float: left;
+  position: relative;
+  top: 155px;
 }
 .acd-content {
   display: none;
@@ -139,9 +139,15 @@ nav ul .nav-hover:hover {
 .chef {
   position: fixed;
   top: 120px;
-  left: 885px;
+  left: 830px;
   right: 0;
   z-index:999999;
+}
+
+@media (max-width: 40em) {
+  .chef {
+  display: none;
+  }
 }
 
 .delete-btn,
@@ -185,6 +191,7 @@ nav ul .nav-hover:hover {
 
 .handle-menu {
   position: relative;
+  margin-left: 15px;
   top: 20px;
   font-size: 20px;
   font-weight: bold;
@@ -197,7 +204,7 @@ nav ul .nav-hover:hover {
   float:right;
   color: #f2f2f2;
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 25px;
   position: relative;
 }
 
