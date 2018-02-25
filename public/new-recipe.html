@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="New-Recipe">
-  <title>Create New Recipe</title>
+  <title>Add New Recipe</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="/float-grid.css">
@@ -13,7 +13,7 @@
 
   <section role="region">
         <header role="banner" class="title row">
-           <h1 class="header">Create New Recipe</h1>
+           <h1 class="header">New Recipe</h1>
         </header>
 
         <nav role="navigation" class="nav">
@@ -31,47 +31,49 @@
 
     <section role="region">
       <div class="row">
-        <div class="col-12">
-          <form class="new-recipe-form">
-            <fieldset name="new-recipe-input">
-                <input placeholder="Recipe Title" type="text" name="recipe-title" id="recipe-title" autocomplete="off" required />
-                <textarea id="todolist" rows="18" class="recipe-entry" placeholder="Create recipe here..."></textarea>
-            </fieldset>
+        <div class="col-3">
+            <form class="new-recipe-form">
+              <div name="new-recipe-input row">
+                  <input class="col-12" placeholder="Recipe Title" type="text" name="recipe-title" id="recipe-title" autocomplete="off" required />
+                  <textarea id="todolist" rows="8" cols="60" class="recipe-entry col-12" placeholder="Create recipe here..."></textarea>
+              </div>
 
-            <div class="recipe-type">
-              <h2 class="type-title">Please Select the type of recipe</h2>
+              <div class="recipe-type col-3">
+                <h2 class="type-title">Please select the type of recipe</h2>
 
-              <input type="radio" name="type-of-recipe" id="appetizer" value="0" checked>
-              <label for="appetizer-recipe" class="recipe-type-select">Appetizer</label><br/>
+                <input type="radio" name="type-of-recipe" id="appetizer" value="0" checked>
+                <label for="appetizer-recipe" class="recipe-type-select">Appetizer</label><br/>
 
-              <input type="radio" name="type-of-recipe" id="entree" value="1">
-              <label for="entree-recipe" class="recipe-type-select">Entree</label><br/>
+                <input type="radio" name="type-of-recipe" id="entree" value="1">
+                <label for="entree-recipe" class="recipe-type-select">Entree</label><br/>
 
-              <input type="radio" name="type-of-recipe" id="dessert" value="2">
-              <label for="dessert-recipe" class="recipe-type-select">Dessert</label><br/>
+                <input type="radio" name="type-of-recipe" id="dessert" value="2">
+                <label for="dessert-recipe" class="recipe-type-select">Dessert</label><br/>
 
-              <input type="radio" name="type-of-recipe" id="snack" value="3">
-              <label for="snack-recipe" class="recipe-type-select">Snack</label><br/>
+                <input type="radio" name="type-of-recipe" id="snack" value="3">
+                <label for="snack-recipe" class="recipe-type-select">Snack</label><br/>
 
-              <input type="radio" name="type-of-recipe" id="cocktail" value="4">
-              <label for="cocktail-recipe" class="recipe-type-select">Cocktail</label><br/>
-            </div>
+                <input type="radio" name="type-of-recipe" id="cocktail" value="4">
+                <label for="cocktail-recipe" class="recipe-type-select">Cocktail</label><br/>
+              </div>
 
-            <div class="calories-container">
-              <h2>Number of calories: </h2>
-              <input type="number" name="calorie-counter" class="calories-input" title="Please enter a number" placeholder="100" autocomplete="off" required />
-            </div>
+              <div class="container col-3">
+                <div class="calories-container">
+                  <h2>Calories: </h2>
+                  <input type="number" name="calorie-counter" class="calories-input" title="Please enter a number" placeholder="100" autocomplete="off" required />
+                </div>
 
-            <div class="author">
-              <h2>Author </h2>
-              First name: <input  type="text" name="firstname-input" id="firstname" autocomplete="off" /><br/>
-              Last name: <input  type="text" name="firstname-input" id="lastname" autocomplete="off" />
-            </div>
+                <fieldset class="author">
+                  <h2>Author</h2>
+                  <p class="firstname">First name:</p><input  type="text" name="firstname-input" id="firstname" autocomplete="off" /><br/>
+                  <p class="lastname">Last name:</p><input  type="text" name="firstname-input" id="lastname" autocomplete="off" /><br/>
+                </fieldset>
+              </div>
 
-            <div class="submit">
-              <button type="submit" class="publish">Publish</button>
-            </div>
-          </form>
+                <div class="submit col-3">
+                  <button type="submit" class="publish">Publish</button>
+                </div>
+            </form>
         </div>
       </div>
     </section>

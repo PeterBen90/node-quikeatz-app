@@ -60,7 +60,6 @@ function updateRecipeRequest(id, title, content, type, calories, firstName, last
     if (window.localStorage.getItem('recipe')) {
       const recipe = JSON.parse(window.localStorage.getItem('recipe'));
       let recipeId = recipe.id;
-      //console.log(recipeId);
 
       $.ajax({
           method: 'PUT',
@@ -79,7 +78,6 @@ function updateRecipeRequest(id, title, content, type, calories, firstName, last
           contentType: 'application/json',
           dataType: 'json',
           success: result => {
-            //console.log(result);
               window.location = "/recipes";
           }
       });

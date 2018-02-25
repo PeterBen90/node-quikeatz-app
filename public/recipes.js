@@ -78,6 +78,8 @@ function getAndDeleteRecipeEntries() {
   getRecipeEntries(deleteRecipeEntries);
 }
 
+//Authentication
+
 const token = localStorage.getItem('token');
 
 $.ajax({
@@ -94,6 +96,8 @@ $('.log-out').on('click', () => {
   localStorage.removeItem('token');
   window.location = "/"
 })
+
+//Nav events
 
 $('.handle').on('click', function(event) {
   $('nav ul').toggleClass('showing');

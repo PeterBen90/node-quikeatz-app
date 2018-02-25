@@ -5,12 +5,13 @@ $('.new-recipe-form').submit(function(event) {
     addNewRecipe();
 });
 
-function postRecipeRequest(title, content, type, calories, firstName, lastName) {
+function postRecipeRequest(userId, title, content, type, calories, firstName, lastName) {
 
     $.ajax({
         method: 'POST',
         url: '/recipe',
         data: JSON.stringify({
+          userId: localStorage.getItem('userId'),
           title: title,
           content: content,
           type: type,
@@ -18,24 +19,21 @@ function postRecipeRequest(title, content, type, calories, firstName, lastName) 
           author: {
             firstName: firstName,
             lastName: lastName
-          },
-          userId: localStorage.getItem('userId')
+          }
         }),
         contentType: 'application/json',
         dataType: 'json',
         success: result => {
-          //console.log(result);
+          console.log(result);
             window.location = "/recipes";
-        },
-        error: error => {
-          console.log(error);
         }
     });
 }
 
 function addNewRecipe() {
+  const userId = localStorage.getItem('userId');
   const recipeTitle = $('#recipe-title').val().trim();
-  const recipeContent = $('.recipe-entry').val().trim();
+  const recipeContent = $('.recipe-entry').val();
   const recipeType = $('input[type=radio]:checked').val();
   let recipeVal;
 
@@ -59,7 +57,7 @@ function addNewRecipe() {
   const authorFirstName =  $('#firstname').val().trim();
   const authorLastName = $('#lastname').val().trim();
 
-  postRecipeRequest(recipeTitle, recipeContent, recipeVal, calorieCount, authorFirstName, authorLastName);
+  postRecipeRequest(userId, recipeTitle, recipeContent, recipeVal, calorieCount, authorFirstName, authorLastName);
 
 }
 

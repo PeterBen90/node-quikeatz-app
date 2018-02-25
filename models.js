@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 // this is my schema to represent a new recipe post
 const newRecipeSchema = mongoose.Schema({
+  userId: {type: String},
+  id: {type: String},
   title: {type: String, required: true},
   type: {type: String, required: true},
   content: {type: String, required: true},
@@ -12,7 +14,6 @@ const newRecipeSchema = mongoose.Schema({
     firstName: String,
     lastName: String,
   },
-  userId: String
 });
 
 newRecipeSchema.virtual('authorString').get(function() {
@@ -22,6 +23,7 @@ newRecipeSchema.methods.serialize = function() {
 
   return {
     id: this._id,
+    userId: this.userId,
     title: this.title,
     type: this.type,
     content: this.content,
