@@ -155,7 +155,7 @@ nav ul .nav-hover:hover {
   font-size: 20px;
   margin-right: 10px;
   position: relative;
-  bottom: 15px;
+  bottom: 10px;
 }
 
 
@@ -393,5 +393,6 @@ footer {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
   }
+}
 
 
