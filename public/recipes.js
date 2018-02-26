@@ -70,6 +70,7 @@ function deleteRecipeEntries(data) {
 }
 
 
+
 function getAndDisplayRecipeEntries() {
   getRecipeEntries(displayRecipeEntries);
 }
