@@ -177,6 +177,10 @@ nav ul .nav-hover:hover {
   color: #19f6e8;
 }
 
+#raw-data {
+  color: #f2f2f2;
+}
+
 /*responsive nav*/
 
 .handle {
