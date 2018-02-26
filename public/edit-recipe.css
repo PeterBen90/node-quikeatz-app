@@ -214,17 +214,18 @@ button:hover {
   position: relative;
   top: 20px;
   font-size: 20px;
+  margin-left: 15px;
   font-weight: bold;
   background: #19f6e8;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.fa-bars {
+.bars {
   float:right;
   color: #f2f2f2;
   font-size: 20px;
-  margin-right: 10px;
+  margin-right: 20px;
   position: relative;
 }
 

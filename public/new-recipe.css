@@ -221,11 +221,11 @@ button:hover {
     -webkit-text-fill-color: transparent;
 }
 
-.fa-bars {
+.bars {
   float:right;
   color: #f2f2f2;
   font-size: 20px;
-  margin-right: 15px;
+  margin-right: 20px;
   position: relative;
 }
 
