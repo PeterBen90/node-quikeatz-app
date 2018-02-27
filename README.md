@@ -10,14 +10,14 @@ Cookbooks contain a wealth of knowledge for people who love to experiment with t
 
 <h2>Technology</h2>
 
-<h4>Front End</h4>
+<h3>Front End</h3>
 
 - HTML5
 - CSS3
 - JavaScript
 - jQuery
 
-<h4>Back End</h4>
+<h3>Back End</h3>
 
 - Node.js
 - Express.js
@@ -25,7 +25,7 @@ Cookbooks contain a wealth of knowledge for people who love to experiment with t
 - Mocha + Chai
 - Travis CI
 
-<h4>Security</h>
+<h3>Security</h3>
 
 - Passport.js
 - bcrypt.js
