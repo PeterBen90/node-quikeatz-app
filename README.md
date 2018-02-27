@@ -22,8 +22,8 @@ Cookbooks contain a wealth of knowledge for people who love to experiment with t
 - Node.js
 - Express.js
 - MongoDB
-- Mocha + Chai
-- Travis CI
+- Mocha + Chai for testing
+- Travis CI for testing
 
 <h3>Security</h3>
 
