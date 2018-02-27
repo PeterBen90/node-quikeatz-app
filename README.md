@@ -2,11 +2,11 @@
 
 <a href="https://quikeatz.herokuapp.com/">Quik Eatz</a> is a convenient recipe storage platform that lets users store, manage and track their favourite recipes.
 
-<img src="/public/icons/start-display.png" width="400" height="250"><img src="/public/icons/my-recipes.png" width="400" height="250">
+<img src="/public/icons/start-display.png" width="400" height="250"> <img src="/public/icons/my-recipes.png" width="400" height="250">
 
 <h2>Introduction</h2>
 
-Cookbooks contain a wealth of knowledge for people who love to experiment with their food. My mother, being a chef, owns hundrends of cookbooks, but flipping through these cookbooks starts to become a lengthy and tedious process. Quik Eatz allows the user to store and manage their absolute favourite recipes that way the user can refer back to the recipes whenever hte user chooses. 
+Cookbooks contain a wealth of knowledge for people who love to experiment with their food. My mother, being a chef, owns hundrends of cookbooks, but flipping through these cookbooks starts to become a lengthy and tedious process. Quik Eatz allows the user to store and manage their absolute favourite recipes that way the user can refer back to the recipes whenever hte user chooses.
 
 <h2>Technology</h2>
 
