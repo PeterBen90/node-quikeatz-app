@@ -29,6 +29,6 @@ Cookbooks contain a wealth of knowledge for people who love to experiment with t
 
 - Passport.js
 - bcrypt.js
-- JSON Wed Tokens (JWT) Authentication
+- JSON Web Tokens (JWT) Authentication
 
 
