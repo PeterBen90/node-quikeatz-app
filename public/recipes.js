@@ -1,8 +1,5 @@
 // Accordian Animation
 $(document).on('click', 'button', function () {
-  $('html, body').animate({
-      scrollTop: $('.container').offset().top
-    }, 500);
     $(this).toggleClass("max").next().slideToggle(500);
 });
 
@@ -15,6 +12,7 @@ $(document).on('click', '.edit-btn', function(event) {
 });
 
 // GET and DELETE Recipes
+
 
 function getRecipeEntries(callbackFn) {
   $.ajax({
@@ -50,6 +48,21 @@ function displayRecipeEntries(data) {
   }
 }
 
+// function getAllRecipeEntries(callbackFn) {
+//   $.ajax({
+//     url: '/recipe',
+//     type: 'GET',
+//     dataType: 'json',
+
+//     success: data => {
+//       if(data) {
+//         let results = data;
+//         callbackFn(results);
+//       }
+//     }
+//   });
+// }
+
 function deleteRecipeEntries(data) {
   for (index in data.recipes) {
     $('.delete-btn').on('click', function(event) {
@@ -78,6 +91,12 @@ function getAndDisplayRecipeEntries() {
 function getAndDeleteRecipeEntries() {
   getRecipeEntries(deleteRecipeEntries);
 }
+
+// function displayDatabaseEntries() {
+//   getAllRecipeEntries(displayRecipeEntries);
+// }
+
+
 
 //Authentication
 
@@ -111,4 +130,5 @@ $('nav ul a').on('click', function(event) {
 
 $(getAndDisplayRecipeEntries);
 $(getAndDeleteRecipeEntries);
+// $(displayDatabaseEntries);
 
