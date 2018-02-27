@@ -4,7 +4,7 @@ $(document).on('click', 'button', function () {
 });
 
 // Store JSON object from hidden div as a string
-// transfers stroed raw data to edit-recipe
+// transfers stored raw data to edit-recipe
 
 $(document).on('click', '.edit-btn', function(event) {
   window.localStorage.setItem('recipe', $(this).siblings('#raw-data').text())
@@ -48,20 +48,6 @@ function displayRecipeEntries(data) {
   }
 }
 
-// function getAllRecipeEntries(callbackFn) {
-//   $.ajax({
-//     url: '/recipe',
-//     type: 'GET',
-//     dataType: 'json',
-
-//     success: data => {
-//       if(data) {
-//         let results = data;
-//         callbackFn(results);
-//       }
-//     }
-//   });
-// }
 
 function deleteRecipeEntries(data) {
   for (index in data.recipes) {
@@ -91,10 +77,6 @@ function getAndDisplayRecipeEntries() {
 function getAndDeleteRecipeEntries() {
   getRecipeEntries(deleteRecipeEntries);
 }
-
-// function displayDatabaseEntries() {
-//   getAllRecipeEntries(displayRecipeEntries);
-// }
 
 
 
@@ -130,5 +112,4 @@ $('nav ul a').on('click', function(event) {
 
 $(getAndDisplayRecipeEntries);
 $(getAndDeleteRecipeEntries);
-// $(displayDatabaseEntries);
 

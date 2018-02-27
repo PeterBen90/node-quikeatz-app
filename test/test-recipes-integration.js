@@ -103,7 +103,7 @@ describe('Recipes API resource', function() {
           res.body.recipes.forEach(function(recipe) {
             expect(recipe).to.be.a('object');
             expect(recipe).to.include.keys(
-              'id', 'title', 'type', 'content', 'calories', 'author');
+              'id', 'title', 'type', 'content', 'calories', 'author', 'userId');
           });
           resRecipe = res.body.recipes[0];
           return Recipe.findById(resRecipe.id);
@@ -111,6 +111,7 @@ describe('Recipes API resource', function() {
         .then(function(recipe) {
 
           expect(resRecipe.id).to.equal(recipe.id);
+          expect(resRecipe.userId).to.equal(recipe.userId);
           expect(resRecipe.title).to.equal(recipe.title);
           expect(resRecipe.type).to.equal(recipe.type);
           expect(resRecipe.content).to.equal(recipe.content);

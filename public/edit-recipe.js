@@ -123,7 +123,7 @@ $('.new-recipe-form').submit(function(event) {
     addNewRecipe();
 });
 
-// logout
+// Logout
 
 $('.log-out').on('click', () => {
   localStorage.removeItem('token');
@@ -137,8 +137,6 @@ $('.handle').on('click', function(event) {
 $('nav ul a').on('click', function(event) {
   $('nav ul').toggleClass('showing');
 });
-
-
 
 
 $(fillForm);

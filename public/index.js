@@ -54,6 +54,8 @@ $('.register-form').on('submit', event => {
     });
 });
 
+// Authentication
+
 $('.login-form').on('submit', event => {
     event.preventDefault();
 
