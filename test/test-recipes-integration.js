@@ -121,39 +121,39 @@ describe('Recipes API resource', function() {
   //   });
   // });
 
-  // describe('POST endpoint', function() {
+  describe('POST endpoint', function() {
 
-  //   it('should add a new recipe', function() {
+    it('should add a new recipe', function() {
 
-  //     const newRecipe = generateRecipeData();
+      const newRecipe = generateRecipeData();
 
-  //     return chai.request(app)
-  //       .post('/recipe')
-  //       .send(newRecipe)
-  //       .then(function(res) {
-  //         expect(res).to.have.status(201);
-  //         expect(res).to.be.json;
-  //         expect(res.body).to.be.a('object');
-  //         expect(res.body).to.include.keys(
-  //           'id', 'title', 'type', 'content', 'calories', 'author');
-  //         expect(res.body.title).to.equal(newRecipe.title);
-  //         expect(res.body.id).to.not.be.null;
-  //         expect(res.body.type).to.equal(newRecipe.type);
-  //         expect(res.body.content).to.equal(newRecipe.content);
-  //         expect(res.body.calories).to.equal(newRecipe.calories);
+      return chai.request(app)
+        .post('/recipe')
+        .send(newRecipe)
+        .then(function(res) {
+          expect(res).to.have.status(201);
+          expect(res).to.be.json;
+          expect(res.body).to.be.a('object');
+          expect(res.body).to.include.keys(
+            'id', 'title', 'type', 'content', 'calories', 'author');
+          expect(res.body.title).to.equal(newRecipe.title);
+          expect(res.body.id).to.not.be.null;
+          expect(res.body.type).to.equal(newRecipe.type);
+          expect(res.body.content).to.equal(newRecipe.content);
+          expect(res.body.calories).to.equal(newRecipe.calories);
 
-  //         return Recipe.findById(res.body.id);
-  //       })
-  //       .then(function(recipe) {
-  //         expect(recipe.title).to.equal(newRecipe.title);
-  //         expect(recipe.type).to.equal(newRecipe.type);
-  //         expect(recipe.content).to.equal(newRecipe.content);
-  //         expect(recipe.calories).to.equal(newRecipe.calories);
-  //         expect(recipe.author.firstName).to.equal(newRecipe.author.firstName);
-  //         expect(recipe.author.lastName).to.equal(newRecipe.author.lastName);
-  //       });
-  //   });
-  // });
+          return Recipe.findById(res.body.id);
+        })
+        .then(function(recipe) {
+          expect(recipe.title).to.equal(newRecipe.title);
+          expect(recipe.type).to.equal(newRecipe.type);
+          expect(recipe.content).to.equal(newRecipe.content);
+          expect(recipe.calories).to.equal(newRecipe.calories);
+          expect(recipe.author.firstName).to.equal(newRecipe.author.firstName);
+          expect(recipe.author.lastName).to.equal(newRecipe.author.lastName);
+        });
+    });
+  });
 
   // describe('PUT endpoint', function() {
 
