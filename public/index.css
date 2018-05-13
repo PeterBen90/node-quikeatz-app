@@ -169,13 +169,12 @@ nav ul .nav-hover:hover {
 
 #about {
   width: 100%;
-  height: 160%;
-  background: #f2f2f2;
+  height: 100%;
+  background: none;
   text-align: left;
   position: absolute;
-  z-index: 1;
+  z-index: 5;
   color: #333333;
-  top: 600px;
 }
 
 .about-text {
@@ -199,18 +198,39 @@ nav ul .nav-hover:hover {
 .about-images {
   display: inline-block;
   text-align: left;
-  padding-bottom: 150px;
+/*  padding-bottom: 150px;*/
   background: none;
 }
 
-.meal {
-  display: inline;
-  float: right;
+.icons {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 250px;
+  color: black;
+/*  margin-top: 30px;*/
 }
 
-@media (max-width: 40em) {
+@media screen and (max-width: 460px) {
+
   .about-images {
-  display: none;
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .icons {
+    font-size: 130px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .about-images {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .icons {
+    font-size: 130px;
   }
 }
 
@@ -218,14 +238,14 @@ nav ul .nav-hover:hover {
 
 #how-to {
   padding-bottom: 60px;
-  padding-top: 30px;
+  padding-top: 100px;
   width: 100%;
-  height: 130%;
-  background: #f2f2f2;
+  height: 100%;
+  background: none;
   text-align: left;
   position: absolute;
   color: #333333;
-  top: 1430px;
+  top: 1460px;
   z-index: 1;
 }
 
@@ -271,14 +291,14 @@ nav ul .nav-hover:hover {
 #register {
   padding-bottom: 100px;
   width: 100%;
-  height: 105%;
+  height: 100%;
   text-align: center;
   position: absolute;
   z-index: 9;
   color: #333333;
   top: 2100px;
-  background: #f2f2f2;
-  padding-top: 0;
+  background: none;
+  padding-top: 100px;
   padding-bottom: 50px;
 }
 
@@ -343,10 +363,9 @@ footer {
   background-color: #f2f2f2;
   text-align: center;
   position: absolute;
-  bottom: 0;
+  top: 600px;
   left: 0;
   right: 0;
-  /*clear: both;*/
 }
 
 
