@@ -175,6 +175,7 @@ nav ul .nav-hover:hover {
   position: absolute;
   z-index: 5;
   color: #333333;
+  margin-top: -60px;
 }
 
 .about-text {
@@ -203,8 +204,8 @@ nav ul .nav-hover:hover {
 
 .icons {
   margin-left: 5px;
-  margin-right: 5px;
-  font-size: 250px;
+  margin-right: 15px;
+  font-size: 230px;
   color: black;
 }
 
@@ -242,7 +243,7 @@ nav ul .nav-hover:hover {
   text-align: left;
   position: absolute;
   color: #333333;
-  top: 1460px;
+  top: 1400px;
   z-index: 1;
 }
 
@@ -288,7 +289,7 @@ nav ul .nav-hover:hover {
   position: absolute;
   z-index: 9;
   color: #333333;
-  top: 2190px;
+  top: 2130px;
   background: none;
 }
 
