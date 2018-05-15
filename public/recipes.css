@@ -178,6 +178,15 @@ nav ul .nav-hover:hover {
   color: #19f6e8;
 }
 
+@media screen and (max-width: 460px) {
+
+  .edit-btn,
+  .delete-btn {
+    float: left;
+  }
+
+}
+
 #raw-data {
   color: #f2f2f2;
 }
