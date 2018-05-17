@@ -12,6 +12,7 @@ const expect = chai.expect;
 const {Recipe} = require('../models');
 const {app, runServer, closeServer} = require('../server');
 const {TEST_DATABASE_URL} = require('../config');
+const {User} = require('../users/models');
 
 chai.use(chaiHttp);
 
@@ -71,55 +72,55 @@ describe('Recipes API resource', function() {
     return closeServer();
   });
 
-  // describe('GET endpoint', function() {
+  describe('GET endpoint', function() {
 
-    // it('should return all existing recipes', function() {
+    it('should return all existing recipes', function() {
 
-    //   let res;
-    //   return chai.request(app)
-    //     .get('/recipe/user/id')
-    //     .then(function(_res) {
-    //       res = _res;
-    //       expect(res).to.have.status(200);
-    //       expect(res.body.recipes).to.have.length.of.at.least(1);
-    //       return Recipe.count();
-    //     })
-    //     .then(function(count) {
-    //       expect(res.body.recipes).to.have.length(count);
-    //     });
-    // });
+      let res;
+      return chai.request(app)
+        .get('/recipe/user/:id')
+        .then(function(_res) {
+          res = _res;
+          expect(res).to.have.status(200);
+          expect(res.body.recipes).to.have.length.of.at.least(1);
+          return Recipe.count();
+        })
+        .then(function(count) {
+          expect(res.body.recipes).to.have.length(count);
+        });
+    });
 
-  //   it('should return recipes with right fields', function() {
+    it('should return recipes with right fields', function() {
 
-  //     let resRecipe;
-  //     return chai.request(app)
-  //       .get('/recipe')
-  //       .then(function(res) {
-  //         expect(res).to.have.status(200);
-  //         expect(res).to.be.json;
-  //         expect(res.body.recipes).to.be.a('array');
-  //         expect(res.body.recipes).to.have.length.of.at.least(1);
+      let resRecipe;
+      return chai.request(app)
+        .get('/recipe/user/:id')
+        .then(function(res) {
+          expect(res).to.have.status(200);
+          expect(res).to.be.json;
+          expect(res.body.recipes).to.be.a('array');
+          expect(res.body.recipes).to.have.length.of.at.least(1);
 
-  //         res.body.recipes.forEach(function(recipe) {
-  //           expect(recipe).to.be.a('object');
-  //           expect(recipe).to.include.keys(
-  //             'id', 'title', 'type', 'content', 'calories', 'author');
-  //         });
-  //         resRecipe = res.body.recipes[0];
-  //         return Recipe.findById(resRecipe.id);
-  //       })
-  //       .then(function(recipe) {
+          res.body.recipes.forEach(function(recipe) {
+            expect(recipe).to.be.a('object');
+            expect(recipe).to.include.keys(
+              'id', 'title', 'type', 'content', 'calories', 'author');
+          });
+          resRecipe = res.body.recipes[0];
+          return Recipe.findById(resRecipe.id);
+        })
+        .then(function(recipe) {
 
-  //         expect(resRecipe.id).to.equal(recipe.id);
-  //         expect(resRecipe.title).to.equal(recipe.title);
-  //         expect(resRecipe.type).to.equal(recipe.type);
-  //         expect(resRecipe.content).to.equal(recipe.content);
-  //         expect(resRecipe.calories).to.equal(recipe.calories);
-  //         expect(resRecipe.author).to.contain(recipe.author.firstName);
+          expect(resRecipe.id).to.equal(recipe.id);
+          expect(resRecipe.title).to.equal(recipe.title);
+          expect(resRecipe.type).to.equal(recipe.type);
+          expect(resRecipe.content).to.equal(recipe.content);
+          expect(resRecipe.calories).to.equal(recipe.calories);
+          expect(resRecipe.author).to.contain(recipe.author.firstName);
 
-  //       });
-  //   });
-  // });
+        });
+    });
+  });
 
   describe('POST endpoint', function() {
 
@@ -155,54 +156,61 @@ describe('Recipes API resource', function() {
     });
   });
 
-  // describe('PUT endpoint', function() {
+  describe('PUT endpoint', function() {
 
-  //   it('should update fields you send over', function() {
-  //     const updateData = {
-  //       title: 'New Recipe',
-  //       content: 'This is a new recipe for all of the foods.'
-  //     };
+    it('should update fields you send over', function() {
+      const updateData = {
+        title: 'New Recipe',
+        content: 'This is a new recipe for all of the foods.'
+      };
 
-  //     return Recipe
-  //       .findOne()
-  //       .then(function(recipe) {
-  //         updateData.id = recipe.id;
+      return Recipe
+        .findOne()
+        .then(function(recipe) {
+          updateData.id = recipe.id;
 
-  //         return chai.request(app)
-  //           .put(`/recipe/${recipe.id}`)
-  //           .send(updateData);
-  //       })
-  //       .then(function(res) {
-  //         expect(res).to.have.status(204);
+          return chai.request(app)
+            .put(`/recipe/${recipe.id}`)
+            .send(updateData);
+        })
+        .then(function(res) {
+          expect(res).to.have.status(204);
 
-  //         return Recipe.findById(updateData.id);
-  //       })
-  //       .then(function(recipe) {
-  //         expect(recipe.title).to.equal(updateData.title);
-  //         expect(recipe.content).to.equal(updateData.content);
-  //       });
-  //   });
-  // });
+          return Recipe.findById(updateData.id);
+        })
+        .then(function(recipe) {
+          expect(recipe.title).to.equal(updateData.title);
+          expect(recipe.content).to.equal(updateData.content);
+        });
+    });
+  });
 
-//   describe('DELETE endpoint', function() {
+  describe('DELETE endpoint', function() {
 
-//     it('delete a recipe by id', function() {
+    it('delete a recipe by id', function() {
 
-//       let recipe;
+      let recipe;
 
-//       return Recipe
-//         .findOne()
-//         .then(function(_recipe) {
-//           recipe = _recipe;
-//           return chai.request(app).delete(`/recipe/${recipe.id}`);
-//         })
-//         .then(function(res) {
-//           expect(res).to.have.status(204);
-//           return Recipe.findById(recipe.id);
-//         })
-//         .then(function(_recipe) {
-//           expect(_recipe).to.be.null;
-//         });
-//     });
-//   });
+      return Recipe
+        .findOne()
+        .then(function(_recipe) {
+          recipe = _recipe;
+          return chai.request(app).delete(`/recipe/${recipe.id}`);
+        })
+        .then(function(res) {
+          expect(res).to.have.status(204);
+          return Recipe.findById(recipe.id);
+        })
+        .then(function(_recipe) {
+          expect(_recipe).to.be.null;
+        });
+    });
+  });
 });
+
+
+
+
+
+
+
