@@ -219,6 +219,10 @@ nav ul .nav-hover:hover {
   .icons {
     font-size: 100px !important;
   }
+
+  #register {
+    margin-top: 150px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -230,6 +234,10 @@ nav ul .nav-hover:hover {
 
   .icons {
     font-size: 140px;
+  }
+
+  #how-to {
+    margin-top: 30px;
   }
 }
 
