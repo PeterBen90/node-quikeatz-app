@@ -251,7 +251,7 @@ nav ul .nav-hover:hover {
   text-align: left;
   position: absolute;
   color: #333333;
-  top: 1400px;
+  top: 1300px;
   z-index: 1;
 }
 
@@ -296,7 +296,7 @@ nav ul .nav-hover:hover {
   position: absolute;
   z-index: 9;
   color: #333333;
-  top: 2130px;
+  top: 2050px;
   background: none;
 }
 
