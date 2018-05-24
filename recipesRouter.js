@@ -11,20 +11,20 @@ const {Recipe} = require('./models');
 
 // GET all recipes
 
-// router.get('/', (req, res) => {
-//   Recipe
-//     .find()
-//     .then(recipes => {
-//       res.json({
-//         recipes: recipes.map(
-//           (recipe) => recipe.serialize())
-//       });
-//     })
-//     .catch(err => {
-//       console.error(err);
-//       res.status(500).json({ message: 'Internal server error' });
-//     });
-// });
+router.get('/', (req, res) => {
+  Recipe
+    .find()
+    .then(recipes => {
+      res.json({
+        recipes: recipes.map(
+          (recipe) => recipe.serialize())
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).json({ message: 'Internal server error' });
+    });
+});
 
 //GET User
 router.get('/user/:userId', (req, res) => {
