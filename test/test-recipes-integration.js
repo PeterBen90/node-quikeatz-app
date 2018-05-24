@@ -90,36 +90,36 @@ describe('Recipes API resource', function() {
         });
     });
 
-    it('should return recipes with right fields', function() {
+    // it('should return recipes with right fields', function() {
 
-      let resRecipe;
-      return chai.request(app)
-        .get('/recipe/user/:id')
-        .then(function(res) {
-          expect(res).to.have.status(200);
-          expect(res).to.be.json;
-          expect(res.body.recipes).to.be.a('array');
-          expect(res.body.recipes).to.have.length.of.at.least(1);
+    //   let resRecipe;
+    //   return chai.request(app)
+    //     .get('/recipe/user/:id')
+    //     .then(function(res) {
+    //       expect(res).to.have.status(200);
+    //       expect(res).to.be.json;
+    //       expect(res.body.recipes).to.be.a('array');
+    //       expect(res.body.recipes).to.have.length.of.at.least(1);
 
-          res.body.recipes.forEach(function(recipe) {
-            expect(recipe).to.be.a('object');
-            expect(recipe).to.include.keys(
-              'id', 'title', 'type', 'content', 'calories', 'author');
-          });
-          resRecipe = res.body.recipes[0];
-          return Recipe.findById(resRecipe.id);
-        })
-        .then(function(recipe) {
+    //       res.body.recipes.forEach(function(recipe) {
+    //         expect(recipe).to.be.a('object');
+    //         expect(recipe).to.include.keys(
+    //           'id', 'title', 'type', 'content', 'calories', 'author');
+    //       });
+    //       resRecipe = res.body.recipes[0];
+    //       return Recipe.findById(resRecipe.id);
+    //     })
+    //     .then(function(recipe) {
 
-          expect(resRecipe.id).to.equal(recipe.id);
-          expect(resRecipe.title).to.equal(recipe.title);
-          expect(resRecipe.type).to.equal(recipe.type);
-          expect(resRecipe.content).to.equal(recipe.content);
-          expect(resRecipe.calories).to.equal(recipe.calories);
-          expect(resRecipe.author).to.contain(recipe.author.firstName);
+    //       expect(resRecipe.id).to.equal(recipe.id);
+    //       expect(resRecipe.title).to.equal(recipe.title);
+    //       expect(resRecipe.type).to.equal(recipe.type);
+    //       expect(resRecipe.content).to.equal(recipe.content);
+    //       expect(resRecipe.calories).to.equal(recipe.calories);
+    //       expect(resRecipe.author).to.contain(recipe.author.firstName);
 
-        });
-    });
+    //     });
+    // });
   });
 
   describe('POST endpoint', function() {
