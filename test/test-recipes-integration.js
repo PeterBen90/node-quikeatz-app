@@ -153,27 +153,27 @@ describe('Recipes API resource', function() {
   });
 
 
-  // describe('DELETE endpoint', function() {
+  describe('DELETE endpoint', function() {
 
-  //   it('delete a recipe by id', function() {
+    it('delete a recipe by id', function() {
 
-  //     let recipe;
+      let recipe;
 
-  //     return Recipe
-  //       .findOne()
-  //       .then(function(_recipe) {
-  //         recipe = _recipe;
-  //         return chai.request(app).delete(`/recipe/${recipe.id}`);
-  //       })
-  //       .then(function(res) {
-  //         expect(res).to.have.status(204);
-  //         return Recipe.findById(recipe.id);
-  //       })
-  //       .then(function(_recipe) {
-  //         expect(_recipe).to.be.null;
-  //       });
-  //   });
-  // });
+      return Recipe
+        .findOne()
+        .then(function(_recipe) {
+          recipe = _recipe;
+          return chai.request(app).delete(`/recipe/${recipe._id}`);
+        })
+        .then(function(res) {
+          expect(res).to.have.status(204);
+          return Recipe.findById(recipe._id);
+        })
+        .then(function(_recipe) {
+          expect(_recipe).to.be.null;
+        });
+    });
+  });
 });
 
 
