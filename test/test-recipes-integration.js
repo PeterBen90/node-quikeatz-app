@@ -12,7 +12,6 @@ const expect = chai.expect;
 const {Recipe} = require('../models');
 const {app, runServer, closeServer} = require('../server');
 const {TEST_DATABASE_URL} = require('../config');
-const {User} = require('../users/models');
 
 chai.use(chaiHttp);
 
@@ -27,6 +26,7 @@ function seedRecipeData() {
   // this will return a promise
   return Recipe.insertMany(seedData);
 }
+
 
 // used to generate data to put in db
 function generateRecipeType() {
@@ -125,34 +125,33 @@ describe('Recipes API resource', function() {
     });
   });
 
-  // describe('PUT endpoint', function() {
+  describe('PUT endpoint', function() {
 
-  //   it('should update fields you send over', function() {
-  //     const updateData = {
-  //       title: 'New Recipe',
-  //       content: 'This is a new recipe for all of the foods.'
-  //     };
+    it('should update fields you send over', function() {
+      const updateData = {
+        title: 'New Recipe',
+        content: 'This is a new recipe for all of the foods.'
+      };
+      return Recipe
+        .findOne()
+        .then(function(recipe) {
+          updateData.id = recipe._id;
+          return chai.request(app)
+            .put(`/recipe/${recipe._id}`)
+            .send(updateData);
+        })
+        .then(function(res) {
+          expect(res).to.have.status(204);
 
-  //     return Recipe
-  //       .findOne()
-  //       .then(function(recipe) {
-  //         updateData.id = recipe.id;
+          return Recipe.findById(updateData.id);
+        })
+        .then(function(recipe) {
+          expect(recipe.title).to.equal(updateData.title);
+          expect(recipe.content).to.equal(updateData.content);
+        });
+    });
+  });
 
-  //         return chai.request(app)
-  //           .put(`/recipe/${recipe.id}`)
-  //           .send(updateData);
-  //       })
-  //       .then(function(res) {
-  //         expect(res).to.have.status(204);
-
-  //         return Recipe.findById(updateData.id);
-  //       })
-  //       .then(function(recipe) {
-  //         expect(recipe.title).to.equal(updateData.title);
-  //         expect(recipe.content).to.equal(updateData.content);
-  //       });
-  //   });
-  // });
 
   // describe('DELETE endpoint', function() {
 
