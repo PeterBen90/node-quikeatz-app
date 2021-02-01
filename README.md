@@ -1,6 +1,6 @@
 <h1>Quik Eatz</h1>
 
-<a href="https://quikeatz.herokuapp.com/">Quik Eatz</a> is a convenient recipe storage platform that lets users store, manage and track their favourite recipes.
+Quik Eatz is a convenient recipe storage platform that lets users store, manage and track their favourite recipes.
 
 <img src="/public/icons/start-display.png" width="400" height="250"> <img src="/public/icons/my-recipes.png" width="400" height="250">
 
